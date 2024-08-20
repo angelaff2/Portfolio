@@ -216,7 +216,6 @@ function changeLanguage(lang) {
     projectItems.forEach((item, index) => {
         const titleElement = item.querySelector('.project-info h3');
         const descriptionElement = item.querySelector('.project-info p');
-        const buttonElement = item.querySelector('.project-button');
 
         if (index < textsLang.projects.length) {
             const project = textsLang.projects[index];
