@@ -9,20 +9,68 @@
     <link rel="icon" href="logoAF_.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Animaciones de aparición */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        /* Aplicar animación a los elementos */
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        .fade-in-up.delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .fade-in-up.delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .fade-in-up.delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .fade-in-up.delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        /* Asegúrate de que la animación solo se aplica una vez */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+            animation-fill-mode: both;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img class="logo" src="Imagenes/logoAF_.png" alt="Logo de Angela Fernandez">
+    <header class="fade-in-up delay-1">
+        <img class="logo fade-in-up delay-2" src="Imagenes/logoAF_.png" alt="Logo de Angela Fernandez">
         
-        <nav class="header-menu">
+        <nav class="header-menu fade-in-up delay-3">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-
             <a href="#contact">Contact</a>
         </nav>
-        <div class="language-switcher">
+        <div class="language-switcher fade-in-up delay-4">
             <button id="es-button" onclick="changeLanguage('es')">
                 <img src="Imagenes/españa.jpg" alt="Español" class="flag-icon"> ES
             </button>
@@ -30,7 +78,7 @@
                 <img src="Imagenes/ingles.jpg" alt="English" class="flag-icon"> EN
             </button>
         </div>
-        <a class="menu-icon" href="#" id="menu-icon">
+        <a class="menu-icon fade-in-up delay-5" href="#" id="menu-icon">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
             </svg>
@@ -39,38 +87,37 @@
     <main>
         <br>
         <br>
-        <section id="about">
+        <section id="about" class="fade-in-up delay-6">
             <div class="about-container">
-                <div class="about-photo">
-                    <img src="Imagenes/myphoto.jpg"  alt="Angela Fernandez">
+                <div class="about-photo fade-in-up delay-7">
+                    <img src="Imagenes/myphoto.jpg" alt="Angela Fernandez">
                 </div>
-                <div class="about-text">
-                        <p class="about-greeting">Hi, I'm</p>
-                        <h1 class="text-gradient">Angela Fernandez</h1>
-                        <h2 class="about-title">Estudiante de Tecnología Digital y Multimedia</h2>
+                <div class="about-text fade-in-up delay-8">
+                    <p class="about-greeting">Hi, I'm</p>
+                    <h1 class="text-gradient">Angela Fernandez</h1>
+                    <h2 class="about-title">Estudiante de Tecnología Digital y Multimedia</h2>
                     
                     <div class="about-links">
-                        <a href="https://www.linkedin.com/in/angela-fernandez-fernandez/" target="_blank" class="about-link">
+                        <a href="https://www.linkedin.com/in/angela-fernandez-fernandez/" target="_blank" class="about-link fade-in-up delay-9">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/angelaff2" target="_blank" class="about-link">
+                        <a href="https://github.com/angelaff2" target="_blank" class="about-link fade-in-up delay-10">
                             <i class="fab fa-github"></i>
                         </a>
-                        
                     </div>
                     <br>
-                    <div class="about-buttons">
-                        <a href="documentos/Curriculum_Angela_Fernandez.pdf" target="_blank" class="ov-btn-slide-right" download="Curriculum_Angela_Fernandez.pdf">Download Resume</a>
-
+                    <div class="about-buttons fade-in-up delay-11">
+                        <a href="documentos/Curriculum_Angela_Fernandez.pdf" target="_blank" class="ov-btn-slide-right">Download Resume</a>
                         <a href="#contact" class="ov-btn-slide-right">Contact Info</a>
                     </div>
-                    
                 </div>
+            
+
             </div>
             <br>
             <br>
             <br><br>
-            <section id="about-info">
+            <section id="about-info" class="fade-in-up delay-6">
                 <h2>Sobre mí</h2>
                 <p>
                     Soy estudiante de cuarto año en <strong>Tecnología Digital y Multimedia</strong> en la <strong>Universitat Politècnica de València</strong>. Mi interés se centra en <strong>programación web</strong>, <strong>desarrollo de aplicaciones</strong>, <strong>creación multimedia</strong> y <strong>gestión de redes sociales</strong>.
