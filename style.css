@@ -1,0 +1,1148 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    margin-left: 5%;
+
+    width: 70px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Header Title */
+.header-title {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header-title h2 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #2d2d2d;
+    font-weight: 400;
+}
+
+/* Navigation Menu */
+/* Estilos para el menú de navegación */
+.header-menu {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.header-menu a {
+    color: #2d2d2d; /* Color de texto por defecto */
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s, transform 0.3s; /* Transiciones para el color y el efecto de escala */
+}
+
+.header-menu a:hover {
+    color: #D500F9; /* Color de texto al pasar el ratón */
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+/* Línea de subrayado animada */
+.header-menu a::after {
+    content: "";
+    display: block;
+    height: 2px; /* Altura de la línea */
+    background: #D500F9; /* Color de la línea */
+    position: absolute;
+    bottom: -5px; /* Ajusta la distancia desde el texto */
+    left: 0;
+    width: 0%;
+    transition: width 0.3s; /* Transición para la animación de la línea */
+}
+
+.header-menu a:hover::after {
+    width: 100%; /* La línea se expande al pasar el ratón */
+}
+
+
+/* Language Switcher */
+/* Estilos para los botones de idioma con imágenes */
+.language-switcher {
+    display: flex;
+    gap: 10px; /* Espaciado entre los botones */
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas más pequeñas */
+}
+
+.language-switcher button {
+    background-color: transparent;
+    border: 1px solid #3498db; /* Color del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    padding: 5px 10px; /* Tamaño del botón */
+    font-size: 1rem; /* Tamaño de la fuente */
+    color: #2d2d2d; /* Color del texto */
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.language-switcher button:hover {
+    transform: scale(1.1);
+    color: #fff; /* Color del texto al pasar el ratón */
+    background-color: #3498db; /* Color de fondo al pasar el ratón */
+}
+
+.flag-icon {
+    width: 20px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-right: 5px; /* Espaciado entre el icono y el texto */
+}
+
+/* Adaptación para pantallas más verticales (por ejemplo, móviles en modo vertical) */
+@media (max-height: 600px) {
+    .language-switcher {
+        justify-content: flex-start; /* Mantiene la alineación a la izquierda */
+        gap: 5px; /* Ajusta el espaciado si es necesario */
+        margin-left: 0; /* Elimina cualquier margen a la izquierda si se ha añadido */
+    }
+
+    .language-switcher button {
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+        padding: 4px 8px; /* Ajusta el tamaño del botón si es necesario */
+    }
+}
+
+
+
+/* Estilos generales de la sección de habilidades */
+/* Estilos generales de la sección de habilidades */
+/* Estilos generales para la sección #skills */
+#skills {
+    text-align: center;
+    padding: 1rem 1rem;
+    background-color: #f4f4f9;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1f2937;
+    position: relative;
+    display: inline-block;
+}
+
+#skills h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #FF0081;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.85rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.skills-item i {
+    font-size: 2rem;
+    color: #3498db; /* Color azul para los iconos */
+    margin-bottom: 1rem;
+}
+
+.skills-item h3 {
+    font-size: 1.2rem;
+    color: #1f2937;
+    margin: 0;
+}
+
+/* Efectos al pasar el ratón */
+.skills-item:hover {
+    background-color: #3498db; /* Fondo azul al pasar el ratón */
+    color: #fff; /* Texto en blanco al pasar el ratón */
+    transform: translateY(-5px); /* Levanta ligeramente el elemento */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+
+.skills-item:hover i {
+    color: #fff; /* Cambia el color del icono al blanco al pasar el ratón */
+}
+
+/* Adaptaciones para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Una columna para pantallas pequeñas */
+    }
+
+    #skills h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+
+    .skills-item {
+        padding: 1.5rem; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+}
+
+
+
+/* Menu Icon */
+.menu-icon {
+    display: none;
+}
+
+.menu-icon svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sections */
+section {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+/* Section Titles */
+h2 {
+    text-align: center;
+    color: #2d2d2d;
+    margin-bottom: 1rem;
+}
+
+/* Section About */
+/* About Section */
+/* Section About Info */
+
+
+/* Estilos generales para la sección #about-info */
+#about-info {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el contenido de la sección */
+}
+
+/* Estilos para el título */
+#about-info h2 {
+    color: #1f2937;
+    font-size: 2rem;
+    margin: 0;
+    position: relative;
+    display: inline-block; /* Asegura que la línea se centre con el texto */
+}
+
+/* Línea subrayada */
+#about-info h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Ajusta la distancia desde el texto (más cerca) */
+    transform: translateX(-50%);
+    width: 50%; /* Ajusta el ancho de la línea */
+    height: 2px; /* Grosor de la línea */
+    background-color: #FF0081; /* Color de la línea */
+    border-radius: 2px; /* Redondea los bordes de la línea */
+}
+
+#about-info ul {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0; /* Elimina margen adicional */
+}
+
+#about-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1rem;
+    /* Asegura que el icono y el texto estén en línea horizontalmente */
+}
+
+#about-info li i {
+    font-size: 1.3rem;
+    color: #3498db; /* Color de iconos fucsia */
+}
+
+.about-info-title {
+    font-weight: bold; /* Destaca el título */
+    display: inline; /* Asegura que el título se mantenga en línea */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) { /* Ajusta el valor según tus necesidades */
+    #about-info li {
+        flex-direction: column; /* Cambia la dirección del flex para apilar verticalmente */
+        align-items: flex-start; /* Alinea el contenido a la izquierda */
+        gap: 0.5rem; /* Espacio entre el icono y el título en pantallas pequeñas */
+        
+    }
+
+    .about-info-title {
+        display: block; /* Muestra el título en una línea separada en pantallas pequeñas */
+        margin-bottom: 0.25rem; /* Espacio entre título y texto en dispositivos móviles */
+    }
+
+    .about-info-text {
+        display: block; /* Asegura que el texto se muestre en la línea siguiente */
+        text-align: left; /* Alinea el texto a la izquierda en pantallas pequeñas */
+
+
+    }
+    
+}
+
+/* Ajusta el padding y el margen para la clase section-about */
+.section-about {
+    background-color: transparent;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Adaptaciones adicionales para pantallas pequeñas */
+@media (max-width: 768px) {
+    .section-about {
+        padding: 1.5rem; /* Reduce el padding en pantallas más pequeñas */
+    }
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-photo img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.about-greeting {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 1.3rem;
+    color: #555;
+    margin: 0;
+    font-weight: 400;
+
+}
+
+.about-name {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0.5rem 0;
+}
+
+.about-title {
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #4b5563;
+    margin: 0.5rem 0;
+}
+
+
+.about-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #6b7280;
+    margin: 1rem 0;
+}
+
+/* Estilo de los botones con efecto de deslizamiento */
+.ov-btn-slide-right {
+    background: transparent; /* color de fondo */
+    color: #FF0081; /* color de fuente (fucsia) */
+    border: 2px solid #FF0081; /* tamaño y color de borde (fucsia) */
+    padding: 8px 12px; /* Tamaño más pequeño */
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+    transition: color 0.35s;
+    margin-right: 0.5rem;
+    letter-spacing: 0.1em;
+}
+
+.ov-btn-slide-right:hover {
+    color: #ffffff; /* color de fuente hover */
+}
+
+.ov-btn-slide-right::after {
+    content: "";
+    background: #FF0081; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 8px 12px; /* Tamaño más pequeño */
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: -100%;
+    transition: all 0.35s;
+}
+
+.ov-btn-slide-right:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+}
+
+.about-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-link {
+    color: #1f2937;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.about-link i {
+    font-size: 1.5rem; /* Tamaño del icono */
+}
+
+.about-link:hover {
+    color: #4b5563;
+}
+
+
+
+
+
+/* Project Items */
+
+.project-item {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el contenido de la sección */
+}
+
+/* Project Title */
+.project-item h3 {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el contenido de la sección */
+}
+
+/* Project Details */
+.project-item p {
+    margin: 0.5rem 0; /* Espaciado entre párrafos */
+    color: #555; /* Color de texto ligeramente más oscuro */
+    font-size: 1rem; /* Tamaño de fuente estándar para mejor legibilidad */
+    line-height: 1.5; /* Aumenta el interlineado para mejor lectura */
+}
+
+/* Bold text for roles and duration */
+.project-item p strong {
+    font-weight: 600; /* Aplica negrita en el texto importante */
+    color: #333; /* Asegura que el texto resaltado sea fácilmente visible */
+}
+
+
+/* Estilos generales de la sección de contacto */
+#contact {
+    padding: 3rem 1rem;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-box {
+    padding: 2rem;
+    
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1f2937;
+    position: relative;
+    display: inline-block;
+}
+
+.contact-box h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #FF0081; /* Color fucsia para el subrayado */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-box p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #3498db; /* Color azul para el borde en focus */
+    outline: none;
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, #3498db, #3c34db); /* Degradado de fucsia a morado */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 550;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    letter-spacing: 0.05em; /* Espaciado entre letras */
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #D500F9, #FF0081); /* Degradado invertido para el hover */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
+}
+
+.contact-form button:active {
+    transform: translateY(0); /* Restaura la posición al hacer clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra normal al hacer clic */
+}
+
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 1rem;
+    color: #555; /* Color gris para el texto */
+    margin-bottom: 1rem;
+}
+
+.contact-info li i {
+    color: #FF0081; /* Color fucsia para los iconos */
+    margin-right: 0.5rem;
+}
+
+.contact-info a {
+    color: #1f2937; /* Color gris oscuro para los enlaces */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+/* Estilos generales para la sección #projects */
+#projects {
+    padding: 2rem 1rem;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+#projects h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #FF0081;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+}
+
+.projects-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.projects-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.project-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-info {
+    margin-bottom: 1rem;
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #3b3b3b;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.project-info p {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #6c6c6c;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.project-item:hover h3,
+.project-item:hover p {
+    color: #1a1a1a;
+}
+
+.project-button {
+    background: linear-gradient(135deg, #3498db, #D500F9);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-button:hover {
+    background: linear-gradient(135deg, #3498db, #D500F9);
+    transform: translateY(-2px);
+}
+
+/* Adaptaciones para pantallas medianas */
+@media (max-width: 1200px) {
+    .projects-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas medianas */
+    }
+}
+
+/* Adaptaciones para pantallas pequeñas */
+@media (max-width: 768px) {
+    .projects-gallery {
+        grid-template-columns: 1fr; /* Una columna para pantallas pequeñas */
+    }
+
+    #projects h2 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+
+    .project-item {
+        padding: 1rem; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .project-info h3 {
+        font-size: 1.2rem; /* Reduce el tamaño de la fuente del título */
+    }
+
+    .project-info p {
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente del párrafo */
+    }
+
+    .project-button {
+        padding: 0.5rem 1rem; /* Reduce el padding del botón */
+        font-size: 0.8rem; /* Reduce el tamaño de la fuente del botón */
+    }
+}
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #fff; /* Fondo oscuro para el footer */
+    color: #000; /* Texto blanco */
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    width: 100px; /* Tamaño del logo */
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-link {
+    color: #232325; /* Texto en gris para los enlaces */
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+}
+
+.footer-link i {
+    font-size: 1.2rem; /* Tamaño del icono */
+    color: #FF0081; /* Iconos en fucsia */
+}
+
+.footer-link:hover {
+    color: #FF0081; /* Cambio de color del texto al pasar el ratón */
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #2d2d2d; /* Texto gris claro */
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.text-gradient {
+    color: transparent;
+    background-image: linear-gradient(to left, #FF0081, #D500F9, #3498db, #FF0081); /* Fucsias y azul */
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: color 3s linear infinite;
+    background-size: 500%;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #fff;
+        width: 100%;
+    }
+
+    .header-menu.active {
+        display: flex;
+    }
+
+    .header-menu a {
+        padding: 15px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .header-title {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .header-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-title h2 {
+        font-size: 1rem;
+    }
+    
+
+    .language-switcher {
+        margin-left: auto;
+        margin-top: 10px;
+
+    }
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo {
+        margin-bottom: 1rem;
+    }
+
+    .about-photo img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .about-text {
+        padding-left: 0;
+    }
+
+    .about-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Animaciones */
+@keyframes topAnimation {
+    from {
+        transform: translate(0rem, 0);
+    }
+    to {
+        transform: translate(0rem, 3.5rem);
+    }
+}
+
+@keyframes bottomAnimation {
+    from {
+        transform: translate(-11.5rem, 0);
+    }
+    to {
+        transform: translate(0rem, 0);
+    }
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+/* Estilos para el modal */
+/* Estilos para el modal */
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+    display: flex; /* Muestra el modal */
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #FF0081;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ff66b2;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.modal-images {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-images img {
+    width: 48%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-text {
+    flex: 1;
+}
+
+.modal-text h3 {
+    margin-top: 0;
+    color: #1f2937;
+}
+
+.modal-text p {
+    color: #4a5568;
+}
+
+/* Estilos del modal */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 1.5rem; /* Reducir el padding */
+    border-radius: 8px;
+    margin: auto;
+}
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    width: 35%; /* Ajusta el ancho del carrusel */
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave para el cambio de imagen */
+}
+
+.carousel-slide img {
+
+    width: 100%;
+    
+    object-fit: contain;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.modal-text {
+    width: 40%;
+    padding-left: 20px;
+}
+
+.modal-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.modal-text p {
+    font-size: 1rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
