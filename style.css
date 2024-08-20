@@ -820,16 +820,15 @@ h2 {
         font-size: 0.8rem; /* Reduce el tamaño de la fuente del botón */
     }
     #contact {
-        padding: 0rem 1rem;
+        padding: 0rem 0rem;
         background-color: #f4f4f9;
         display: flex;
         justify-content: center;
     }
     
     .contact-box {
-        padding: 1rem;
+        padding: 0rem;
         
-        max-width: 1000px;
         width: 100%;
         text-align: center;
     }
